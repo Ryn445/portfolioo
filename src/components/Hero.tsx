@@ -21,12 +21,12 @@ const Hero = () => {
               Adriano Henrique
             </h1>
             <h2 className="text-3xl md:text-4xl font-semibold text-gradient">
-              Desenvolvedor em Formação
+               Automação &  IA
             </h2>
           </div>
 
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Tenho experiência em automação e desenvolvimento web, e estou focado em me tornar
+            Tenho experiência em automação e desenvolvimento web e estou focado em me tornar
             especialista em IA aplicada a automações e segurança.
           </p>
 
