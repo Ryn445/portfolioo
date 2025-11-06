@@ -1,7 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 
 const Hero = () => {
+  // número e mensagem (use seu número real com DDI e DDD)
+  const whatsappNumber = "556181455863";
+  const whatsappMessage = encodeURIComponent("Olá, vi seu portfólio e gostaria de conversar!");
+
   return (
     <section
       id="hero"
@@ -17,11 +21,9 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
           <div className="space-y-4">
             <p className="text-muted-foreground text-lg">Olá, eu sou</p>
-            <h1 className="text-5xl md:text-7xl font-bold">
-              Adriano Henrique
-            </h1>
+            <h1 className="text-5xl md:text-7xl font-bold">Adriano Henrique</h1>
             <h2 className="text-3xl md:text-4xl font-semibold text-gradient">
-               Automação &  IA
+              Automação & IA
             </h2>
           </div>
 
@@ -39,6 +41,7 @@ const Hero = () => {
             </Button>
           </div>
 
+          {/* Ícones sociais */}
           <div className="flex gap-4 justify-center items-center pt-4">
             <a
               href="mailto:enrriqueadriano4455@gmail.com"
@@ -64,6 +67,16 @@ const Hero = () => {
               aria-label="LinkedIn"
             >
               <Linkedin size={24} />
+            </a>
+            {/* Botão de WhatsApp */}
+            <a
+              href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-green-500 transition-colors"
+              aria-label="WhatsApp"
+            >
+              <MessageCircle size={24} />
             </a>
           </div>
 

@@ -1,7 +1,11 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  // número e mensagem (use seu número com DDI + DDD)
+  const whatsappNumber = "556181455863";
+  const whatsappMessage = encodeURIComponent("Olá, vi seu portfólio e gostaria de conversar!");
 
   return (
     <footer className="py-8 bg-card border-t border-border">
@@ -23,6 +27,7 @@ const Footer = () => {
               >
                 <Mail size={20} />
               </a>
+
               <a
                 href="https://github.com/Ryn445"
                 target="_blank"
@@ -32,6 +37,7 @@ const Footer = () => {
               >
                 <Github size={20} />
               </a>
+
               <a
                 href="https://www.linkedin.com/in/henrique-alvess"
                 target="_blank"
@@ -40,6 +46,17 @@ const Footer = () => {
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
+              </a>
+
+              {/* Botão de WhatsApp */}
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-primary/10 rounded-lg text-primary hover:bg-primary/20 transition-colors"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle size={20} />
               </a>
             </div>
           </div>
