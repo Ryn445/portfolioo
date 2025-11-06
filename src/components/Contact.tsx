@@ -1,8 +1,13 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, MapPin, FileText } from "lucide-react";
+import { Mail, MapPin, FileText, MessageCircle } from "lucide-react";
 
 const Contact = () => {
+  // número e mensagem 
+  const whatsappNumber = "556181455863"; 
+  const whatsappMessage = encodeURIComponent("Olá, vi seu portfólio e gostaria de conversar!");
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
   return (
     <section id="contact" className="py-20 bg-card/50">
       <div className="container mx-auto px-4">
@@ -22,6 +27,7 @@ const Contact = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {/* Email */}
               <Card className="p-6 bg-card border-border hover:border-primary/50 transition-all">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg">
@@ -39,6 +45,7 @@ const Contact = () => {
                 </div>
               </Card>
 
+              {/* Localização */}
               <Card className="p-6 bg-card border-border hover:border-secondary/50 transition-all">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-secondary/10 rounded-lg">
@@ -55,29 +62,47 @@ const Contact = () => {
               </Card>
             </div>
 
+            {/* Botões de contato */}
             <div className="text-center space-y-4">
-              <Button variant="hero" size="lg" asChild className="w-full md:w-auto">
-                <a href="mailto:enrriqueadriano4455@gmail.com">
-                  <Mail className="mr-2" size={20} />
-                  Enviar Email
-                </a>
-              </Button>
-              
+              <div className="flex flex-col md:flex-row justify-center gap-4">
+                {/* Botão de Email */}
+                <Button variant="hero" size="lg" asChild className="w-full md:w-auto">
+                  <a href="mailto:enrriqueadriano4455@gmail.com">
+                    <Mail className="mr-2" size={20} />
+                    Enviar Email
+                  </a>
+                </Button>
+
+                {/* Botão de WhatsApp */}
+                <Button
+                  variant="outline"
+                  size="lg"
+                  asChild
+                  className="w-full md:w-auto border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all"
+                >
+                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="mr-2" size={20} />
+                    WhatsApp
+                  </a>
+                </Button>
+              </div>
+
               <p className="text-sm text-muted-foreground">
                 Adoro um desafio, vamos encontrar uma solução para seus problemas.
               </p>
             </div>
           </Card>
 
+          {/* Outros projetos */}
           <Card className="mt-6 p-6 bg-card border-border text-center">
             <FileText className="mx-auto mb-3 text-primary" size={32} />
-            <h4 className="font-semibold text-lg mb-2">Currículo Disponível</h4>
+            <h4 className="font-semibold text-lg mb-2">Outros projetos</h4>
             <p className="text-muted-foreground mb-4">
               Interessado em saber mais sobre minha experiência e qualificações?
             </p>
             <Button variant="outline" asChild>
               <a href="mailto:enrriqueadriano4455@gmail.com?subject=Solicitação de Currículo">
-                Solicitar Currículo Completo
+                Entrar em contato
               </a>
             </Button>
           </Card>
