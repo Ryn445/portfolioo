@@ -50,7 +50,7 @@ const Projects = () => {
       ],
       technologies: ["React", "Vite", "TypeScript", "TailwindCSS", "Lucide React"],
       type: "Pessoal - Em Demonstração",
-      liveLink: "https://financeiro-sooty.vercel.app/transactions",
+      liveLink: "https://financeiro-sooty.vercel.app/",
       codeLink: "https://github.com/Ryn445/Financeiro",
     },
   ];
