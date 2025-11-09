@@ -37,7 +37,7 @@ const Projects = () => {
     {
       title: "Controle Financeiro",
       description:
-        "Sistema web para gerenciamento financeiro pessoal e de pequenas empresas, com cadastro de clientes, histórico de transações e relatórios automáticos.",
+        "Sistema web para gerenciamento financeiro pessoal  histórico de transações e relatórios automáticos.",
       features: [
         "Dashboard",
         "Transações",
